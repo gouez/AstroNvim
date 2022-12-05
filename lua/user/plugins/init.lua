@@ -1,4 +1,5 @@
 local M = {
+  ["rebelot/heirline.nvim"] = { disable = true },
   ["phaazon/hop.nvim"] = { disable = true },
   ["sainnhe/gruvbox-material"] = { opt = false },
   ["ray-x/navigator.lua"] = {
@@ -14,7 +15,7 @@ local M = {
     end
   },
   ["ray-x/go.nvim"] = {
-    ft = {"go"},
+    ft = { "go" },
     config = function()
       require 'user.plugins.go'
     end
@@ -33,6 +34,12 @@ local M = {
       "ggandor/leap.nvim"
     },
   },
+  ["windwp/windline.nvim"] = {
+    event = { "UIEnter" },
+    config = function()
+      require('user.plugins.windline')
+    end
+  }
 }
 
 return M

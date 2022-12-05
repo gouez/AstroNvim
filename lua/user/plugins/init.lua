@@ -34,10 +34,10 @@ local M = {
       "ggandor/leap.nvim"
     },
   },
-  ["windwp/windline.nvim"] = {
-    event = { "UIEnter" },
+  ["nvim-lualine/lualine.nvim"] = {
+    -- event = { "UIEnter" },
     config = function()
-      require('user.plugins.windline')
+      require('user.plugins.lualine')
     end
   }
 }

@@ -12,16 +12,6 @@ vim.g.gruvbox_material_improved_strings = 1
 vim.g.gruvbox_material_improved_warnings = 1
 vim.g.gruvbox_material_enable_bold = 1
 
--- vim.cmd('hi Normal guibg=black')
--- vim.cmd('hi EndOfBuffer guibg=black')
--- vim.cmd('hi FloatBorder   guibg=black')
--- vim.cmd('hi NormalFloat   guibg=black')
--- vim.cmd('hi NeoTreeDirectoryIcon  guifg=#e78a4e')
--- vim.cmd('hi Pmenu guibg=black')
--- vim.cmd('hi PmenuSel NONE')
--- vim.cmd('hi link PmenuSel DiffAdd')
-
-
 local grpid = vim.api.nvim_create_augroup('custom_highlights_gruvboxmaterial', {})
 vim.api.nvim_create_autocmd('ColorScheme', {
   group = grpid,
@@ -44,9 +34,9 @@ vim.api.nvim_create_autocmd('ColorScheme', {
       -- 'hi TelescopeResultsBorder             guifg=#89b482 guibg=#282828 |' ..
       -- 'hi TelescopeMatching                  guifg=#d8a657 guibg=#282828 |' ..
       -- 'hi TelescopeSelection                 guifg=#ffffff guibg=#32302f |' ..
-      -- 'hi FloatBorder                        guifg=#ea6962 guibg=#282828 |' ..
-      'hi BqfPreviewBorder                   guifg=#ea6962 guibg=#282828 |' ..
-      -- 'hi NormalFloat                        guibg=#282828 |' ..
+      'hi FloatBorder                         guibg=black|' ..
+      'hi BqfPreviewBorder                    guibg=black |' ..
+      'hi NormalFloat                        guibg=black |' ..
       'hi IndentBlanklineContextChar         guifg=#d3869b |' ..
       'hi markid1                            guifg=#ff8f88 |' ..
       'hi markid2                            guifg=#ffb074 |' ..
@@ -57,6 +47,9 @@ vim.api.nvim_create_autocmd('ColorScheme', {
       'hi markid7                            guifg=#fecc7d |' ..
       'hi markid8                            guifg=#eed8b2 |' ..
       'hi markid9                            guifg=#ffedc7 |' ..
+      'hi Pmenu                              guibg=black |' ..
+      'hi PmenuSel NONE |' ..
+      'hi link PmenuSel DiffAdd |' ..
       'hi markid10                           guifg=#cebfaa |'
 })
 

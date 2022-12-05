@@ -11,7 +11,16 @@ local M = {
     config = function()
       require 'user.plugins.navigator'
     end
-  }
+  },
+  ["ray-x/go.nvim"] = {
+    config = function()
+      require 'user.plugins.go'
+    end
+  },
+  ["mrjones2014/legendary.nvim"] = {
+    requires = "dressing.nvim",
+    config = "require('user.plugins.legendary')",
+  },
 }
 
 return M

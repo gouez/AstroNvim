@@ -1,4 +1,5 @@
 local M = {
+  ["phaazon/hop.nvim"] = { disable = true },
   ["sainnhe/gruvbox-material"] = { opt = false },
   ["ray-x/navigator.lua"] = {
     event = 'BufRead',
@@ -13,6 +14,7 @@ local M = {
     end
   },
   ["ray-x/go.nvim"] = {
+    ft = {"go"},
     config = function()
       require 'user.plugins.go'
     end
@@ -20,6 +22,16 @@ local M = {
   ["mrjones2014/legendary.nvim"] = {
     requires = "dressing.nvim",
     config = "require('user.plugins.legendary')",
+  },
+  ["ggandor/leap.nvim"] = {
+    config = function()
+      require('user.plugins.leap')
+    end
+  },
+  ["ggandor/flit.nvim"] = {
+    requires = {
+      "ggandor/leap.nvim"
+    },
   },
 }
 
